@@ -8,42 +8,50 @@
     android:background="#363535"
     tools:context=".Activity.NameActivity">
 
-    <LinearLayout
-        android:layout_width="360dp"
-        android:layout_height="836dp"
-        android:background="#FFEBD9"
-        android:orientation="vertical"
-        android:padding="16dp"
+    <androidx.cardview.widget.CardView
+        android:layout_width="379dp"
+        android:layout_height="850dp"
+        app:cardCornerRadius="30dp"
+        app:cardElevation="4dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-
         app:layout_constraintTop_toTopOf="parent">
 
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/nameEditText"
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="104dp"
-            android:layout_marginBottom="80dp"
-            android:layout_marginStart="12dp"
-            android:layout_marginEnd="12dp"
-            android:hint="Enter Your Name"
-            android:inputType="textEmailAddress"
-            android:textSize="24sp" />
+            android:layout_height="match_parent"
+            android:background="#FFEBD9"
+            android:orientation="vertical"
+            android:padding="16dp">
 
-        <com.google.android.material.button.MaterialButton
-            android:id="@+id/submitButton"
-            android:layout_width="210dp"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"
-            android:layout_marginTop="32dp"
-            android:backgroundTint="#8C7878"
-            android:paddingTop="12dp"
-            android:paddingBottom="12dp"
-            android:text="SUBMIT"
-            android:textSize="24sp"
-            app:cornerRadius="12dp" />
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/nameEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="204dp"
+                android:layout_marginEnd="12dp"
+                android:layout_marginBottom="80dp"
+                android:hint="Enter Your Name"
+                android:inputType="textEmailAddress"
+                android:textColor="@color/black"
+                android:textColorHint="@color/material_dynamic_neutral40"
+                android:textSize="24sp" />
 
-    </LinearLayout>
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/submitButton"
+                android:layout_width="210dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="32dp"
+                android:backgroundTint="#8C7878"
+                android:paddingTop="12dp"
+                android:paddingBottom="12dp"
+                android:text="SUBMIT"
+                android:textSize="24sp"
+                app:cornerRadius="12dp" />
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
 </androidx.constraintlayout.widget.ConstraintLayout>

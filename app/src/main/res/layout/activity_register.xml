@@ -13,9 +13,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="124dp"
+        android:fontFamily="@font/aldrich"
         android:text="REGISTER"
-        android:textSize="34sp"
         android:textColor="#000"
+        android:textSize="34sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
@@ -38,6 +39,8 @@
             android:layout_height="wrap_content"
             android:hint="Email"
             android:inputType="textEmailAddress"
+            android:textColorHint="@color/material_dynamic_neutral40"
+
             android:layout_marginEnd="16dp"
             android:layout_marginStart="16dp"
 
@@ -58,10 +61,12 @@
             android:id="@+id/passwordEditText"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Password"
-            android:inputType="textPassword"
-            android:layout_marginEnd="16dp"
             android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:hint="Password"
+            android:textColorHint="@color/material_dynamic_neutral40"
+
+            android:inputType="textPassword"
             android:textSize="24sp" />
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -70,35 +75,43 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="64dp"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="48dp"
         android:layout_marginEnd="64dp"
         android:backgroundTint="#8C7878"
         android:paddingTop="12dp"
         android:paddingBottom="12dp"
         android:text="LOGIN"
+        android:textColorHighlight="@color/white"
+        android:textColorHint="@color/white"
+        android:textColorLink="@color/white"
         android:textSize="24sp"
         app:cornerRadius="12dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/passwordTextInputLayout" />
+        app:layout_constraintTop_toBottomOf="@+id/registerButton"
+        app:layout_constraintVertical_bias="0.0" />
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/registerButton"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="64dp"
-        android:layout_marginTop="44dp"
+        android:layout_marginTop="68dp"
         android:layout_marginEnd="64dp"
-        android:backgroundTint="#8C7878"
+        android:backgroundTint="#BC3E2E"
         android:paddingTop="12dp"
         android:paddingBottom="12dp"
         android:text="REGISTER"
+        android:textColorHighlight="@color/white"
+        android:textColorHint="@color/white"
+        android:textColorLink="@color/white"
         android:textSize="24sp"
         app:cornerRadius="12dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/loginButton" />
+        app:layout_constraintTop_toBottomOf="@+id/passwordTextInputLayout" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

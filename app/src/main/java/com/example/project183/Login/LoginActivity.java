@@ -44,7 +44,7 @@ public class LoginActivity extends AppCompatActivity {
         passwordEditText = findViewById(R.id.passwordEditText);
         Button loginButton = findViewById(R.id.loginButton);
         Button registerButton = findViewById(R.id.registerButton);
-        Button adminLoginButton = findViewById(R.id.adminLoginButton);
+       // Button adminLoginButton = findViewById(R.id.adminLoginButton);
 
 
         loginButton.setOnClickListener(v -> {
@@ -53,7 +53,7 @@ public class LoginActivity extends AppCompatActivity {
             signIn(email, password);
         });
 
-        adminLoginButton.setOnClickListener(v -> {
+       /* adminLoginButton.setOnClickListener(v -> {
             String email = emailEditText.getText().toString();
             String password = passwordEditText.getText().toString();
             if (email.equals("admin@gmail.com") && password.equals("adminpassword")){
@@ -64,7 +64,7 @@ public class LoginActivity extends AppCompatActivity {
                 Toast.makeText(LoginActivity.this, "Login Failed", Toast.LENGTH_SHORT).show();
 
             }
-        });
+        });*/
 
         registerButton.setOnClickListener(v -> {
             Intent intent = new Intent(LoginActivity.this, RegisterActivity.class);
@@ -91,10 +91,10 @@ public class LoginActivity extends AppCompatActivity {
                     }
                 });
     }
-    private boolean isUserAdmin(String email, String password) {
+    /*private boolean isUserAdmin(String email, String password) {
         // Check if the email and password match the admin credentials
         return email.equals("useradmin") && password.equals("adminpass");
-    }
+    }*/
 
     private void navigateToMenuActivity() {
         Intent intent = new Intent(LoginActivity.this, NameActivity.class);
@@ -103,12 +103,12 @@ public class LoginActivity extends AppCompatActivity {
         finish();
     }
 
-    private void navigateToAdminActivity() {
+   /* private void navigateToAdminActivity() {
         Intent intent = new Intent(LoginActivity.this, AdminActivity.class);
         intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
         startActivity(intent);
         finish();
-    }
+    }*/
 
     @Override
     public void onStart() {

@@ -41,6 +41,7 @@
                     android:layout_marginStart="8dp"
                     android:layout_marginTop="8dp"
                     android:text="Welcome"
+                    android:textColor="@color/black"
                     app:layout_constraintStart_toEndOf="@+id/imageProfile"
                     app:layout_constraintTop_toTopOf="parent" />
 
@@ -49,19 +50,21 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Name"
+                    android:textColor="@color/black"
                     android:textStyle="bold"
                     app:layout_constraintBottom_toBottomOf="@+id/imageProfile"
                     app:layout_constraintStart_toStartOf="@+id/textView"
                     app:layout_constraintTop_toBottomOf="@+id/textView" />
 
                 <ImageView
-                    android:id="@+id/imageView6"
+                    android:id="@+id/logout"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:onClick="logoutBtn"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
-                    app:srcCompat="@drawable/bell" />
+                    app:srcCompat="@drawable/baseline_logout_24" />
             </androidx.constraintlayout.widget.ConstraintLayout>
 
             <androidx.constraintlayout.widget.ConstraintLayout
@@ -76,6 +79,7 @@
                     android:paddingStart="16dp"
                     android:paddingEnd="16dp"
                     app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
 
@@ -143,7 +147,7 @@
         android:layout_width="match_parent"
         android:layout_height="70dp"
         android:background="@color/white"
-        android:padding="4dp"
+        android:padding="3dp"
         app:cnb_iconColor="@color/white"
         app:cnb_iconSize="20dp"
         app:cnb_menuResource="@menu/bottom_menu"

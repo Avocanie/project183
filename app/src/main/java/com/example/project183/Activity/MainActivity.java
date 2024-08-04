@@ -15,8 +15,10 @@ import com.example.project183.Adapter.CategoryAdapter;
 import com.example.project183.Adapter.SliderAdapter;
 import com.example.project183.Domain.Category;
 import com.example.project183.Domain.SliderItems;
+import com.example.project183.Login.LoginActivity;
 import com.example.project183.R;
 import com.example.project183.databinding.ActivityMainBinding;
+import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -48,6 +50,12 @@ public class MainActivity extends BaseActivity {
         } else {
             displayNameTextView.setText("No name received");
         }
+
+       binding.logout.setOnClickListener( v -> {
+           FirebaseAuth.getInstance().signOut();
+           Intent intent = new Intent(MainActivity.this, IntroActivity.class);
+           startActivity(intent);
+        });
     }
 
     private void initBanner() {
@@ -121,4 +129,6 @@ public class MainActivity extends BaseActivity {
             }
         });
     }
+
+
 }
